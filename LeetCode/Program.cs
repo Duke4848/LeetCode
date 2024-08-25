@@ -1,73 +1,79 @@
-﻿namespace LeetCode
+﻿using System;
+using System.Collections.Generic;
+
+namespace LeetCode
 {
     public class WordDictionary
     {
-        public const char ROOT_CHAR = (char)'@';
-        public const char TERMINATE_WORD = '!';
-        public Node Root { get; set; }
+        private Node Root { get; set; }
 
         public WordDictionary()
         {
-            Root = new Node(ROOT_CHAR);
+            Root = new Node();
         }
 
         public void AddWord(string word)
         {
-            if (word == null || word.Length == 0)
+            if (string.IsNullOrEmpty(word))
             {
                 return;
             }
 
             var curr = Root;
-            int i = 0;
-            for (; i < word.Length; i++)
+            foreach (var ch in word)
             {
-                var matchedChild = curr.GetMatchingChild(word[i]);
-                if (matchedChild == null)
+                if (!curr.Children.ContainsKey(ch))
                 {
-                    break;
+                    curr.Children[ch] = new Node();
                 }
-                curr = matchedChild;
+                curr = curr.Children[ch];
             }
 
-            for (; i < word.Length; i++)
+            curr.IsEndOfWord = true;
+        }
+
+        public bool Search(string word)
+        {
+            if (string.IsNullOrEmpty(word))
             {
-                var child = new Node(word[i]);
-                curr.Children.Add(child);
-                curr = child;
+                return false;
             }
 
-            curr.Children.Add(new Node(TERMINATE_WORD));
+            return Search(word, 0, Root);
         }
 
-        public bool Search(String word)
+        private bool Search(string word, int index, Node node)
         {
-            if (word == null || word.Length == 0)
-                return false;
-            word += TERMINATE_WORD;
-
-            return Search(Root, word, 0);
-
-        }
-
-        public bool Search(Node currentNode, string word, int i)
-        {
-            if (i == word.Length)
-                return true;
-
-            var matchedChildren = currentNode.GetMatchingChildren(word[i]);
-            if (!matchedChildren.Any())
-                return false;
-
-            foreach (Node child in matchedChildren)
+            if (index == word.Length)
             {
-                if(Search(child, word, i + 1))
+                return node.IsEndOfWord;
+            }
+
+            char ch = word[index];
+
+            if (ch == '.')
+            {
+                foreach (var child in node.Children.Values)
                 {
-                    return true;
+                    if (Search(word, index + 1, child))
+                    {
+                        return true;
+                    }
                 }
+
+                return false;
             }
-            return false;
+            else
+            {
+                if (!node.Children.ContainsKey(ch))
+                {
+                    return false;
+                }
+
+                return Search(word, index + 1, node.Children[ch]);
+            }
         }
+
         public void PrintTree2()
         {
             var d = new Dictionary<int, List<char>>();
@@ -75,24 +81,17 @@
             {
                 d[i] = new List<char>();
             }
-            Stack<Node> stack = new Stack<Node>();
-            Stack<int> nodeLevel = new Stack<int>();
-            stack.Push(Root);
-            nodeLevel.Push(0);
+            Stack<(Node, int)> stack = new Stack<(Node, int)>();
+            stack.Push((Root, 0));
 
             while (stack.Count > 0)
             {
-                Node next = stack.Pop();
-                int curLevel = nodeLevel.Pop();
+                var (next, curLevel) = stack.Pop();
 
-                d[curLevel].Add(next.C);
-
-                //Console.WriteLine(curLevel + " " + next.C);
-
-                foreach (Node c in next.Children)
+                foreach (var kv in next.Children)
                 {
-                    nodeLevel.Push(curLevel + 1);
-                    stack.Push(c);
+                    d[curLevel].Add(kv.Key);
+                    stack.Push((kv.Value, curLevel + 1));
                 }
             }
 
@@ -103,33 +102,15 @@
         }
     }
 
-    public class Node : IComparable<Node>
+    public class Node
     {
-        public char C { get; set; }
-        public List<Node> Children { get; set; }
-        public Node(char c)
+        public Dictionary<char, Node> Children { get; set; }
+        public bool IsEndOfWord { get; set; }
+
+        public Node()
         {
-            C = c;
-            Children = new List<Node>();
-        }
-
-        public Node GetMatchingChild(char c)
-        {
-            return Children.FirstOrDefault(child => child.C == c);
-
-        }
-
-        public List<Node> GetMatchingChildren(char c)
-        {
-            if (c == '.')
-                return Children.Where(n => n.C != WordDictionary.TERMINATE_WORD).ToList();
-
-            return Children.Where(child => child.C == c).ToList();
-        }
-
-        public int CompareTo(Node? other)
-        {
-            return C - other.C;
+            Children = new Dictionary<char, Node>();
+            IsEndOfWord = false;
         }
     }
 
@@ -152,6 +133,5 @@
 
 /**
  * Your WordDictionary object will be instantiated and called as such:
- * WordDictionary obj = new WordDictionary(); obj.addWord(word); boolean param_2
- * = obj.search(word);
+ * WordDictionary obj = new WordDictionary(); obj.addWord(word); boolean param_2 = obj.search(word);
  */
