@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "LeetCode\LeetCode.csproj", "{10FDED55-928F-4383-B5BA-0282ACBF92C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LeetCode", "LeetCode\LeetCode.csproj", "{10FDED55-928F-4383-B5BA-0282ACBF92C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trie", "Trie\Trie.csproj", "{937C9C6E-9CDE-48C6-86DC-D9D0C0DED2BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trie", "Trie\Trie.csproj", "{937C9C6E-9CDE-48C6-86DC-D9D0C0DED2BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leetcode438FindAllAnagrams", "Leetcode438FindAllAnagrams\Leetcode438FindAllAnagrams.csproj", "{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leetcode438FindAllAnagrams", "Leetcode438FindAllAnagrams\Leetcode438FindAllAnagrams.csproj", "{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "278FirstBadVersion", "278FirstBadVersion\278FirstBadVersion.csproj", "{D587A4C0-FC89-4DC7-98B8-5725CF35BC24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "938Range Sum Bst", "938Range Sum Bst\938Range Sum Bst.csproj", "{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D587A4C0-FC89-4DC7-98B8-5725CF35BC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D587A4C0-FC89-4DC7-98B8-5725CF35BC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D587A4C0-FC89-4DC7-98B8-5725CF35BC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D587A4C0-FC89-4DC7-98B8-5725CF35BC24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
