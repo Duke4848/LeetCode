@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeetCode", "LeetCode\LeetCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trie", "Trie\Trie.csproj", "{937C9C6E-9CDE-48C6-86DC-D9D0C0DED2BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leetcode438FindAllAnagrams", "Leetcode438FindAllAnagrams\Leetcode438FindAllAnagrams.csproj", "{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{937C9C6E-9CDE-48C6-86DC-D9D0C0DED2BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{937C9C6E-9CDE-48C6-86DC-D9D0C0DED2BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{937C9C6E-9CDE-48C6-86DC-D9D0C0DED2BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
