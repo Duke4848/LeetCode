@@ -9,9 +9,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trie", "Trie\Trie.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leetcode438FindAllAnagrams", "Leetcode438FindAllAnagrams\Leetcode438FindAllAnagrams.csproj", "{B3B8AC78-2A71-49F8-9B79-1E7267EADBEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "278FirstBadVersion", "278FirstBadVersion\278FirstBadVersion.csproj", "{D587A4C0-FC89-4DC7-98B8-5725CF35BC24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "278FirstBadVersion", "278FirstBadVersion\278FirstBadVersion.csproj", "{D587A4C0-FC89-4DC7-98B8-5725CF35BC24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "938Range Sum Bst", "938Range Sum Bst\938Range Sum Bst.csproj", "{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "938Range Sum Bst", "938Range Sum Bst\938Range Sum Bst.csproj", "{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "215. Kth Largest Element in an Array", "215. Kth Largest Element in an Array\215. Kth Largest Element in an Array.csproj", "{D10A8D07-DB00-4B6F-9C72-246B66A02DFA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "124. Binary Tree Maximum Path Sum", "124. Binary Tree Maximum Path Sum\124. Binary Tree Maximum Path Sum.csproj", "{2D999757-BB26-4C27-A366-B93F5413DA47}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23. Merge k Sorted Lists", "23. Merge k Sorted Lists\23. Merge k Sorted Lists.csproj", "{6FC016F8-78FF-4173-98F4-1FCD9BA97171}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "523. Continuous Subarray Sum", "523. Continuous Subarray Sum\523. Continuous Subarray Sum.csproj", "{E874088D-5E23-40FE-A7C1-3DD18118C9A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "398. Random Pick Index", "398. Random Pick Index\398. Random Pick Index.csproj", "{5AF4ECC5-5565-406C-BDEE-BA5E9294A168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "173. Binary Search Tree Iterator", "173. Binary Search Tree Iterator\173. Binary Search Tree Iterator.csproj", "{94B3B1F2-B0CC-4332-9BB7-B71FD0CA711A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +51,30 @@ Global
 		{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8BAB1FF-5AC9-4489-B361-F185FBA596A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D10A8D07-DB00-4B6F-9C72-246B66A02DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D10A8D07-DB00-4B6F-9C72-246B66A02DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D10A8D07-DB00-4B6F-9C72-246B66A02DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D10A8D07-DB00-4B6F-9C72-246B66A02DFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D999757-BB26-4C27-A366-B93F5413DA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D999757-BB26-4C27-A366-B93F5413DA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D999757-BB26-4C27-A366-B93F5413DA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D999757-BB26-4C27-A366-B93F5413DA47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FC016F8-78FF-4173-98F4-1FCD9BA97171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FC016F8-78FF-4173-98F4-1FCD9BA97171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FC016F8-78FF-4173-98F4-1FCD9BA97171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FC016F8-78FF-4173-98F4-1FCD9BA97171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E874088D-5E23-40FE-A7C1-3DD18118C9A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E874088D-5E23-40FE-A7C1-3DD18118C9A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E874088D-5E23-40FE-A7C1-3DD18118C9A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E874088D-5E23-40FE-A7C1-3DD18118C9A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AF4ECC5-5565-406C-BDEE-BA5E9294A168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AF4ECC5-5565-406C-BDEE-BA5E9294A168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AF4ECC5-5565-406C-BDEE-BA5E9294A168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AF4ECC5-5565-406C-BDEE-BA5E9294A168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B3B1F2-B0CC-4332-9BB7-B71FD0CA711A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B3B1F2-B0CC-4332-9BB7-B71FD0CA711A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B3B1F2-B0CC-4332-9BB7-B71FD0CA711A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B3B1F2-B0CC-4332-9BB7-B71FD0CA711A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
