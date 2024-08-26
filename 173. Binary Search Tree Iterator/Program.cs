@@ -45,8 +45,9 @@ public class BSTIterator
 
     public int Next()
     {
-        PushLeft(stack.Peek().right);
-        return stack.Pop().val;
+        var top = stack.Pop();
+        PushLeft(top.right);
+        return top.val;
     }
 
     public bool HasNext()
