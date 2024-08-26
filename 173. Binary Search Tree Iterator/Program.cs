@@ -56,9 +56,10 @@ public class BSTIterator
 
     private void PushLeft(TreeNode node)
     {
-        while (node != null)
+        if (node != null)
         {
-            stack.Push(node.left);
+            stack.Push(node);
+            PushLeft(node.left);
         }
     }
 
@@ -69,15 +70,21 @@ public class BSTIterator
         var n15 = new TreeNode(15);
         var n9 = new TreeNode(9);
         var n20 = new TreeNode(20);
+
+        n7.left = n3;
+        n7.right = n15;
+        n15.left = n9;
+        n15.right = n20;
+
         BSTIterator bSTIterator = new BSTIterator(n7);
-        bSTIterator.Next();    // return 3
-        bSTIterator.Next();    // return 7
-        bSTIterator.HasNext(); // return True
-        bSTIterator.Next();    // return 9
-        bSTIterator.HasNext(); // return True
-        bSTIterator.Next();    // return 15
-        bSTIterator.HasNext(); // return True
-        bSTIterator.Next();    // return 20
-        bSTIterator.HasNext(); // return False
+        Console.WriteLine(bSTIterator.Next());    // return 3
+        Console.WriteLine(bSTIterator.Next());    // return 7
+        Console.WriteLine(bSTIterator.HasNext()); // return True
+        Console.WriteLine(bSTIterator.Next());    // return 9
+        Console.WriteLine(bSTIterator.HasNext()); // return True
+        Console.WriteLine(bSTIterator.Next());    // return 15
+        Console.WriteLine(bSTIterator.HasNext()); // return True
+        Console.WriteLine(bSTIterator.Next());    // return 20
+        Console.WriteLine(bSTIterator.HasNext()); // return False
     }
 }
